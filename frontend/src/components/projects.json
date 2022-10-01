@@ -1,0 +1,73 @@
+{
+    "projects": [
+        {
+            "term": 1,
+            "title": "Wikipedia (WebDev Project)",
+            "image": "/images/Web1537.png",
+            "body": "My very first project! Simple page that only used CSS and JS",
+            "technologies": ["html", "css", "netlify"],
+            "link": "https://practical-goldstine-e15e09.netlify.app/assignment01/wikipedia.html",
+            "code": "https://github.com/Matirix/COMP1537",
+            "id": 1
+
+        },
+        {
+            "term": 1,
+            "title": "OlympiX",
+            "image": "/images/Vision.png",
+            "tools": 
+                {
+                    "Figjam": "https://www.figma.com/file/djdGBtJafzQqOoDNmZ3jfD/1800-202210-DTC-13?node-id=0%3A1",
+                    "WireFlow": "https://www.figma.com/file/2dLCCaz9RUoIjst32nfuTs/Wireflow",
+                    "Trello": "https://trello.com/b/d8WkgPmr/1800202210dtc13",
+                    "Github":  "https://github.com/Matirix/1800_202210_13"
+
+                }
+            ,
+            "link": "https://olympix-e596b.web.app/html/main.html",
+            "code": "https://github.com/Matirix/1800_202210_13",
+            "body": "From my first Projects course where I learned to work in a group as the project manager. We used firebaseas our backend to develop an app that allowed users to easily access the olympics for our class's theme",
+            "id": 2
+
+        },
+        {
+            "term": 1.5,
+            "title": "Pokuisine",
+            "image": "/images/pokeapi.png",
+            "body": "Here I learned to develop a pseudo-modern application that allowed users to have an account that would save their details like favorites and timeline. Part of our assignment also had us make a mini-memory game which was fun",
+            "technologies": ["PokeaApi", "Ajax", "express-sessions", "node.js", "SSRs", "MONGODB"],
+            "link": "https://young-tor-70220.herokuapp.com/",
+            "code": "https://github.com/Matirix/COMP2537/tree/main/Assignment4",
+            "id": 3
+
+        },
+        {
+            "term": 1.5,
+            "title": "FoodBuddy",
+            "image": "/images/Foodbuddy.png",
+            "tools": {
+                    "Figjam": "https://www.figma.com/file/NxFYnGa5OUG4bqBzksyZsb/2800-202210-DTC04?node-id=0%3A1",
+                    "WireFlow": "https://www.figma.com/file/T2rBmkzsVturva2TTIX2Hu/2800-FoodBuddy-Wireframe-DTC-04",
+                    "Trello": "https://trello.com/b/zOaHmvk8/28002022dtc04",
+                    "Github": "https://github.com/dlepke/2800-202210-DTC04"
+                
+        },
+            "body": "This is from my seconds project course. We developed an application that would allow users to find a store that holds the product htey're searching for at the lowest cost",
+            "id": 4,
+            "code": "https://github.com/dlepke/2800-202210-DTC04",
+            "link": "https://dtc04-foodbuddy.herokuapp.com/"
+
+        },
+        {
+            "term": 1.75,
+            "title": "PokeReact",
+            "image": "/images/v2.png",
+            "body": "Here I recreated one of my assignemnts using React",
+            "technologies": ["React", "PokeaApi", "Axios", "node.js", "reactQeury"],
+            "link": "https://matreactpoke.netlify.app/",
+            "code": "https://github.com/Matirix/ReactProject",
+            "id": 5
+
+        }
+    ]
+}
