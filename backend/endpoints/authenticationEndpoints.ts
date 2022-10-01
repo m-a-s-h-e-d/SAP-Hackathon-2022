@@ -4,8 +4,8 @@ let router = express.Router();
 
 // Login authentication
 router.post("/login", (req, res) => {
-  res.send("Random Login Token Hash");
   console.log(req.body);
+  res.send("Random Login Token Hash");
 });
 
 export default router;

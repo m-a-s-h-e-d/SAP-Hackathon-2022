@@ -1,18 +1,24 @@
 // Imports for dependencies
 import express from "express";
 import cors from "cors";
+import mongoose from "mongoose";
 
 // Imports for endpoints
-import authenticationEndpoints from "./endpoints/authenticationEndpoints.js";
-import profileEndpoints from "./endpoints/profileEndpoints.js";
-import postsEndpoints from "./endpoints/postsEndpoints.js";
-import kudosEndpoints from "./endpoints/kudosEndpoints.js";
-import goalsEndpoints from "./endpoints/goalsEndpoints.js";
+import authenticationEndpoints from "./endpoints/authenticationEndpoints";
+import profileEndpoints from "./endpoints/profileEndpoints";
+import postsEndpoints from "./endpoints/postsEndpoints";
+import kudosEndpoints from "./endpoints/kudosEndpoints";
+import goalsEndpoints from "./endpoints/goalsEndpoints";
 
 // Basic web server setup
-const app = express();
+let app = express();
 app.use(express.json());
 app.use(cors());
+
+// Database connection setup
+mongoose.connect(
+  "mongodb+srv://ethos-admin:saphackathon2022@ethos.sfpyfac.mongodb.net/?retryWrites=true&w=majority"
+);
 
 // Authentication endpoints
 app.use("/auth", authenticationEndpoints);
