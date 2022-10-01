@@ -14,7 +14,8 @@ function App() {
       {/* <Profile /> */}
       {/* <LoginScreen/> */}
       {/* <KudosToday /> */}
-      <SendKudos />
+      {/* <SendKudos /> */}
+      <Navbar />
     </div>
   );
 }
