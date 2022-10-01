@@ -1,31 +1,34 @@
+// Imports for dependencies
 import express from "express";
 import cors from "cors";
 
+// Imports for endpoints
+import authenticationEndpoints from "./endpoints/authenticationEndpoints.js";
+import profileEndpoints from "./endpoints/profileEndpoints.js";
+import postsEndpoints from "./endpoints/postsEndpoints.js";
+import kudosEndpoints from "./endpoints/kudosEndpoints.js";
+import goalsEndpoints from "./endpoints/goalsEndpoints.js";
+
+// Basic web server setup
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.post("/login", (req, res) => {
-  res.send("Random Login Token Hash");
-  console.log(req.body);
-});
+// Authentication endpoints
+app.use("/auth", authenticationEndpoints);
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
+// Profile endpoints
+app.use("/profile", profileEndpoints);
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
+// Userpost endpoints
+app.use("/posts", postsEndpoints);
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
+// Kudos endpoints
+app.use("/kudos", kudosEndpoints);
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
+// Personal goals endpoint
+app.use("/goals", goalsEndpoints);
 
 app.listen(3000, () => {
-  console.log("Listening on port 3000");
+  console.log("Started listening on port 3000");
 });
