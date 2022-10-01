@@ -2,14 +2,18 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "SAP Hackathon 2022 Backend",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.20"
   }
 }
