@@ -20,22 +20,28 @@ function KudosToday() {
             id: 1,
             name: "Jacky",
             message: "Hey, Thanks for helping me set up shop",
-            pic: "https://picsum.photos/seed/picsum/40/40"
+            pic: "../images/Foodbuddy.png",
+            time: "15:34"
+
 
         },
         {
             id: 2,
             name: "Dustin",
             message: "That was really well thought out!",
-            pic: "https://picsum.photos/seed/picsum/40/40"
+            pic: "../images/node.png",
+            time: "15:34"
 
-            
+
+
         },
         {
             id: 3,
             name: "Matthew",
             message: "Keep up the good work!",
-            pic: "https://picsum.photos/seed/picsum/40/40"
+            pic: "../images/mev2.jpeg",
+            time: "15:34"
+
 
         }
     ]
@@ -45,51 +51,50 @@ function KudosToday() {
     return (
         <div className='my-2 min-h-screen bg-[#F5F5F4]'>
 
-            {messages.map(({ id, name, message, pic }) => (
-                //Id of each one [needed to map]
-                <div key={id} className="bg-[#DAF0F7] shadow-sm  rounded-lg py-3 px-3 my-1">
-                    <div className='flex titleAndButtons justify-between'>
-                    <img src={pic} alt="" />
+            {messages.map(({ id, name, message, pic, time }) => (
 
-                        {/* Name */}
-                        <text className="name">
-                            {name}
-                        </text>
+                <div key={id} className="flex flex-row p-3 border-b-2">
+                    <img src={pic} alt=""
+                        className='w-12 h-12 object-cover rounded-full align-middle' />
+                    <div className="flex flex-col w-full">
+                        <div className="flex flex-row justify-between">
+                            {/* Name tothe Left */}
+                            <h1 className="text-lg font-bold px-2">{name}</h1>
 
-                        {/* Buttons */}
-                        <div className='ButtonsToRight'>
-                        <span>
-                                {/* SendKudos clicking is a hit or miss*/}
+                            {/* Buttons */}
+                            <div className='ButtonsToRight flex flex-row justify-end'>
 
-                                <button onClick={clicked} className='mx-auto'>
-                                    <div className='w-max'>
-                                        <object className="mx-auto my-auto" type="image/svg+xml" data='../images/reply.svg' >
-                                        </object>
-                                    </div>
-                                </button>
-                            </span>
-                            <span>
-                                {/* Add to ScrapBook */}
-                                <button className='my-auto'>
-                                    <div className='w-max'>
-                                    <object className="mx-auto my-auto" type="image/svg+xml" data='../images/favorite_border.svg' >
-                                    </object>     
-                                    </div>
+                                <span className=''>
+                                    {/* SendKudos clicking is a hit or miss*/}
 
-                                </button>
-                        </span>
+                                    <button onClick={clicked} className='mx-auto'>
+                                        <div className='w-max'>
+                                            <object className="mx-auto my-auto" type="image/svg+xml" data='../images/reply.svg' >
+                                            </object>
+                                        </div>
+                                    </button>
+                                </span>
+                                <span>
+                                    {/* Add to ScrapBook */}
+                                    <button className='my-auto'>
+                                        <div className='w-max'>
+                                            <object className="mx-auto my-auto" type="image/svg+xml" data='../images/favorite_border.svg' >
+                                            </object>
+                                        </div>
+
+                                    </button> 
+                                </span>
+                            </div>
+
+
                         </div>
-
+                        <h1 className="text-base text-slate-500 px-2">
+                            {message}
+                        </h1>
                     </div>
-
-                    {/* message */}
-                    <p className='message'>{message}</p>
-
-
                 </div>
-
-
             ))}
+
             {window && <SendKudos setChoice={setChoice} setWindow={setWindow} />}
 
         </div>

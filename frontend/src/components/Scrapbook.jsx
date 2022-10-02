@@ -31,9 +31,9 @@ function Scrapbook() {
     },
     {
       id: 4,
-      desc: "'It was a blast working with you!'",
+      desc: "'Lovely Project'",
       date: "10/01/2019",
-      img: "../images/melol.JPG",
+      img: "../images/html.png",
       color: "bg-[#FFFFD1]"
 
 
@@ -49,7 +49,7 @@ function Scrapbook() {
       {/* Dynamically Create */}
       {ditems.map(({id, desc, date, img, color}) => (
         <div className={`SplitTwo flex flex-row justify-evenly shadow-sm my-1 rounded-xl py-2  ${color}`} key={id}>
-          <div className='w-20'>
+          <div className='w-12 h-12'>
             <img className='' src={img} alt="" />
           </div>
           <div className='grid place-items-center'>

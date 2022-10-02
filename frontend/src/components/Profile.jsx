@@ -8,17 +8,27 @@ const Profile = () => {
 
   return (
     
-    <div className="grid h-screen place-items-center">
+    <div className="flex flex-col">
       {/* Default picture */}
-      <img src="" alt="" />
+
+      <div className="flex tophalf">
+          {/* Left side */}
+        <div className="profilepic ">
+          <img className='rounded-full' src="../images/react.png" alt="" />
+        </div>
+
+          {/* Statistics */}
+        <div>
+          <span>Posts: insert data</span>
+          <span>Kudos given: insert data</span>
+          <span></span>
+        </div>
+
+      </div>
+
       <h3>Username</h3>
 
-      {/* Statistics */}
-      <div>
-        <span>Posts: insert data</span>
-        <span>Kudos given: insert data</span>
-        <span></span>
-      </div>
+
 
       {/* Bio information */}
       <div className='Bio'>

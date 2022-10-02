@@ -50,7 +50,7 @@ const MakePost = ({ setChoice, setWindow }) => {
 
                 </textarea>
               </div>
-              <button onClick={handleSubmit} className='text-center border-2 rounded-sm my-1 w-full p-2 bg-[#DAF0F7]' >Add Blog</button>
+              <button onClick={handleSubmit} className='text-center border-2 rounded-sm my-1 w-full p-2 bg-[#DAF0F7]' >Add Post</button>
               <button onClick={handleCancelClick} className='border-2 py-2 rounded-md w-full bg-[#FFA7A0]' >Cancel</button>
 
 
