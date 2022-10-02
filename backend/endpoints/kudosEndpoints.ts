@@ -8,9 +8,13 @@ const queryHelper = new MongooseHelper(SchemaType.Kudos);
 
 // Fetch kudos
 router.get("/", async (req, res) => {
+  let requestBody = req.body;
   // Filter by date and time delta
-  console.log(`Getting kudos`);
-  res.send("Array of kudos objects");
+  // Any extra filtering and stuff can be done here for the request body
+
+  // Find with $gt
+
+  await queryHelper.query(QueryType.Read, requestBody, res);
 });
 
 // Create kudos

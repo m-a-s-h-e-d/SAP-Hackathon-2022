@@ -8,10 +8,11 @@ const queryHelper = new MongooseHelper(SchemaType.Profile);
 
 // Fetch profile
 router.get("/:userid", async (req, res) => {
-  // If the user is missing, and the id is valid, create new profile
+  let requestBody = {
+    userid: req.params.userid,
+  };
 
-  console.log(`Fetching profile for user ${req.params.userid}`);
-  res.send("Profile for requested user");
+  await queryHelper.query(QueryType.ReadOne, requestBody, res);
 });
 
 // Update profile
