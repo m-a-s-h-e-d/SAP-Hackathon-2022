@@ -47,7 +47,7 @@ const Navbar = () => {
         {links.map(({id, link, pic, name}) => (
 
 
-                <Link className='flex-col w-1/4' key={id} to={link}>
+                <Link className=' flex-col w-1/4' key={id} to={link}>
 
                 <div className="text-center max-w-md">
                     <object className="mx-auto my-auto" type="image/svg+xml" data={pic} >

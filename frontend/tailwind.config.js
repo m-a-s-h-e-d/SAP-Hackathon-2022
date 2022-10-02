@@ -15,6 +15,9 @@ module.exports = {
     //   'bg-db': '#205EA1',
     //   'bg-navy': '#163D58'
     //  red #FFA7A0
+// DAF0F7 WATER
+// FFFFD1 Yellow
+// CD978B
 
 
     // }

@@ -44,7 +44,7 @@ const SendKudos = ({ setChoice, setWindow }) => {
         <div className='bg-slate-200 opacity-90 fixed inset-0 z-50 '>
             <div className='flex flex-col h-screen justify-center items-center opacity-100' >
                 {/* Change bottom to position height */}
-                <div className=' absolute inset-x-0 bottom-20 flex-col rounded-lg justify-center opacity-100 bg-white py-5 px-auto border-sky-300'>
+                <div className=' absolute inset-x-0 bottom-0 flex-col rounded-lg justify-center opacity-100 bg-white py-5 px-auto border-sky-300'>
                     <h1 className='text-center text-lg'>Send Kudos</h1>
 
                     {/*  Fixed Messages */}
@@ -74,7 +74,7 @@ const SendKudos = ({ setChoice, setWindow }) => {
                                     name="" id=""></textarea>
 
                                 {/* Send button */}
-                                <div className='text-center border-2 rounded-sm my-1 w-full p-2' 
+                                <div className='text-center border-2 rounded-sm my-1 w-full p-2 bg-[#DAF0F7]' 
                                     onClick={handleAnyClick}>
                                     Send!
                                 </div>

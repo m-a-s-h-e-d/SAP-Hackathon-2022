@@ -43,11 +43,11 @@ function KudosToday() {
 
 
     return (
-        <div className='my-3'>
+        <div className='my-2 min-h-screen bg-[#F5F5F4]'>
 
             {messages.map(({ id, name, message, pic }) => (
                 //Id of each one [needed to map]
-                <div key={id} className="shadow-md  rounded-lg py-3 px-3">
+                <div key={id} className="bg-[#DAF0F7] shadow-sm  rounded-lg py-3 px-3 my-1">
                     <div className='flex titleAndButtons justify-between'>
                     <img src={pic} alt="" />
 
