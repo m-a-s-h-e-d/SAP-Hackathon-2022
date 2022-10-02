@@ -35,6 +35,6 @@ app.use("/kudos", kudosEndpoints);
 // Personal goals endpoint
 app.use("/goals", goalsEndpoints);
 
-app.listen(3000, () => {
-  console.log("Started listening on port 3000");
+app.listen(5500, () => {
+  console.log("Started listening on port 5500");
 });
