@@ -8,7 +8,7 @@ const queryHelper = new MongooseHelper(SchemaType.Post);
 
 // Fetch posts
 router.get("/", async (req, res) => {
-  let requestBody = req.body;
+  let requestBody = req.body || {};
   // Filter by date and time delta
   // Any extra filtering and stuff can be done here for the request body
 

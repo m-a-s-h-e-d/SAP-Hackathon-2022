@@ -7,8 +7,10 @@ let router = express.Router();
 const queryHelper = new MongooseHelper(SchemaType.Kudos);
 
 // Fetch kudos
-router.get("/", async (req, res) => {
-  let requestBody = req.body;
+router.get("/:recipientid", async (req, res) => {
+  let requestBody = {
+    recipientid: req.params.recipientid,
+  };
   // Filter by date and time delta
   // Any extra filtering and stuff can be done here for the request body
 
