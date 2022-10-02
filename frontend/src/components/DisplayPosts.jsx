@@ -76,7 +76,7 @@ function DisplayPosts() {
         ))}
 
       {/* To dynamically create stuff - Save for later when you have a template ready! */}
-
+      <div className="mt-10 p-10"></div>
       {window && <MakePost setChoice={setChoice} setWindow={setWindow} />}
     </div>
   );

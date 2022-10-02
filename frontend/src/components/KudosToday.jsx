@@ -80,6 +80,7 @@ function KudosToday() {
           </div>
         ))}
 
+      <div className="mt-10 p-10"></div>
       {window && <SendKudos setChoice={setChoice} setWindow={setWindow} />}
     </div>
   );
