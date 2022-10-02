@@ -47,31 +47,35 @@ function KudosToday() {
 
             {messages.map(({ id, name, message, pic }) => (
                 //Id of each one [needed to map]
-                <div key={id} className="shadow-md border rounded-lg  py-3 px-3">
+                <div key={id} className="shadow-md  rounded-lg py-3 px-3">
                     <div className='flex titleAndButtons justify-between'>
                     <img src={pic} alt="" />
 
                         {/* Name */}
                         <text className="name">
-                            
                             {name}
                         </text>
+
                         {/* Buttons */}
-                    
                         <div className='ButtonsToRight'>
                         <span>
                                 {/* SendKudos clicking is a hit or miss*/}
 
                                 <button onClick={clicked} className='mx-auto'>
-                                <object className="mx-auto my-auto" type="image/svg+xml" data='../images/reply.svg' >
-                            </object>
+                                    <div className='w-max'>
+                                        <object className="mx-auto my-auto" type="image/svg+xml" data='../images/reply.svg' >
+                                        </object>
+                                    </div>
                                 </button>
                             </span>
                             <span>
                                 {/* Add to ScrapBook */}
                                 <button className='my-auto'>
-                                <object className="mx-auto my-auto" type="image/svg+xml" data='../images/favorite_border.svg' >
-                                </object>
+                                    <div className='w-max'>
+                                    <object className="mx-auto my-auto" type="image/svg+xml" data='../images/favorite_border.svg' >
+                                    </object>     
+                                    </div>
+
                                 </button>
                         </span>
                         </div>

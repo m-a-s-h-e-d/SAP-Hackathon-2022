@@ -49,13 +49,9 @@ const Navbar = () => {
 
                 <Link className='flex-col w-1/4' key={id} to={link}>
 
-                <div className="text-center">
+                <div className="text-center max-w-md">
                     <object className="mx-auto my-auto" type="image/svg+xml" data={pic} >
                     </object>
- 
-
-                {/* <p className='text-sm mx-auto my-auto'>{link}</p> */}
-                    
                 </div>
 
                 </Link>
