@@ -1,12 +1,8 @@
 
 import { useState } from 'react'
-import { Radar } from 'react-chartjs-2';
 import Profile from './components/Profile';
-import SpiderGraph from './components/SpiderGraph';
 import Navbar from './components/Navbar'
-import LoginScreen from './components/LoginScreen';
 import KudosToday from './components/KudosToday';
-import SendKudos from './components/SendKudos';
 import Header from './components/Header';
 import { BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom';
 import DisplayPosts from './components/DisplayPosts';

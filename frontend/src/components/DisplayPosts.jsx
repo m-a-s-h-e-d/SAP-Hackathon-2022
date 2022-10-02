@@ -41,7 +41,7 @@ function DisplayPosts() {
 
 
     return (
-        <div className=' min-h-screen bg-gradient-to-b from-slate-50 to-blue-100'>
+        <div className=' min-h-screen  bg-gradient-to-b from-slate-50 to-blue-100'>
 
             {/* Change post */}
             <div className='flex py-2 justify-end' onClick={clicked}>

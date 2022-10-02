@@ -41,7 +41,7 @@ const SendKudos = ({ setChoice, setWindow }) => {
 
 
     return (
-        <div className='bg-slate-200 opacity-90 fixed inset-0 z-50 '>
+        <div className='bg-slate-200 opacity-90 fixed inset-0 z-50'>
             <div className='flex flex-col h-screen justify-center items-center opacity-100' >
                 {/* Change bottom to position height */}
                 <div className=' absolute inset-x-0 bottom-0 flex-col rounded-lg justify-center opacity-100 bg-white py-5 px-auto border-sky-300'>
@@ -49,7 +49,7 @@ const SendKudos = ({ setChoice, setWindow }) => {
 
                     {/*  Fixed Messages */}
                     {messages.map(({ id, message }) => (
-                        <button className='border-2 rounded-sm my-1 w-full'
+                        <button className='border-2 border-blue-100 active:bg-violet-200 rounded-md my-1 w-full'
                             onClick={handleAnyClick}
                             key={id}>
                             <p className='text-center py-2'>{message}</p>
@@ -74,7 +74,7 @@ const SendKudos = ({ setChoice, setWindow }) => {
                                     name="" id=""></textarea>
 
                                 {/* Send button */}
-                                <div className='text-center border-2 rounded-sm my-1 w-full p-2 bg-[#DAF0F7]' 
+                                <div className='text-center border-2 active:bg-violet-700 rounded-sm my-1 w-full p-2 bg-[#DAF0F7]' 
                                     onClick={handleAnyClick}>
                                     Send!
                                 </div>

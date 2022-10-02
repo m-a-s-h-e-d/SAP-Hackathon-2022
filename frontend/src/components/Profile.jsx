@@ -20,7 +20,7 @@ const Profile = () => {
 
   return (
     
-    <div className='bg-gradient-to-b from-zinc-50 to-purple-100 min-h-screen'>
+    <div className='bg-gradient-to-b from-zinc-50 to-zinc-100 min-h-screen'>
 
 
       <div class="h-48 bg-gradient-to-t from-zinc-200 to-violet-300"></div>

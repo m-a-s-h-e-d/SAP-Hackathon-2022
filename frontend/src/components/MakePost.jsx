@@ -28,11 +28,11 @@ const MakePost = ({ setChoice, setWindow }) => {
         <div className=' absolute inset-x-0 bottom-0 flex-col rounded-lg justify-center opacity-100 bg-white py-5 px-auto border-sky-300'>
           {/* Where the columns start */}
           <div className="create flex flex-col text-center ">
-            <h2>Add a new Blog</h2>
+            <h2>New Post</h2>
             <form onSubmit={handleSubmit}>
               {/* Titlepost */}
 
-              <label htmlFor="" className="postTitle">Title</label>
+              <label htmlFor="" className="postTitle">Title: </label>
               <input type="text"
                 typeof='text'
 
@@ -43,7 +43,7 @@ const MakePost = ({ setChoice, setWindow }) => {
 
               {/* Body Post */}
               <div className="post flex flex-col">
-                <label htmlFor="" className="postContent"> Post </label>
+                <label htmlFor="" className="postContent"> Post:  </label>
 
                 <textarea className='border-2 rounded-lg' name="" id="" cols="30" rows="5" value={body}
                   onChange={e => setBody(e.target.value)}>
