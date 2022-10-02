@@ -43,7 +43,7 @@ function DisplayPosts() {
         posts.map(({ id, authorname, createdAt, content }) => (
           <div key={id} className="flex flex-row p-3 border-b-2">
             <img
-              src={`https://picsum.photos/id/${getRandomInt(100)}/200/200`}
+              src={`https://picsum.photos/id/${getRandomInt(50)}/200/200`}
               alt=""
               className="w-12 h-12 object-cover rounded-full"
             />
