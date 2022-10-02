@@ -65,11 +65,19 @@ function DisplayPosts() {
                     <h1 className="text-base text-slate-500 px-2">
                         {postText}
                     </h1>
-                    <div>
+                    <div className='flex justify-end'>
                         {/* {Buttons} */}
                         <button className="bg-[#DAF0F7] rounded-md float-right sendkudos text-base text-slate-500 px-2">
                             Send Kudos
                         </button>
+
+                        <button className='my-auto mx-1' >
+                                        <div className='w-max'>
+                                            <object className="mx-auto my-auto" type="image/svg+xml" data='../images/favorite_border.svg' >
+                                            </object>
+                                        </div>
+                        </button> 
+
                     </div>
                 </div>
             </div>

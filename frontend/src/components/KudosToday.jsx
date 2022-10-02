@@ -68,7 +68,7 @@ function KudosToday() {
                                     {/* SendKudos clicking is a hit or miss*/}
 
                                     <button onClick={clicked} className='mx-auto'>
-                                        <div className='w-max'>
+                                        <div className='w-max mx-auto'>
                                             <object className="mx-auto my-auto" type="image/svg+xml" data='../images/reply.svg' >
                                             </object>
                                         </div>
@@ -81,7 +81,6 @@ function KudosToday() {
                                             <object className="mx-auto my-auto" type="image/svg+xml" data='../images/favorite_border.svg' >
                                             </object>
                                         </div>
-
                                     </button> 
                                 </span>
                             </div>
