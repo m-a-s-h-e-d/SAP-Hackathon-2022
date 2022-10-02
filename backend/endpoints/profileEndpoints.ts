@@ -15,6 +15,16 @@ router.get("/:userid", async (req, res) => {
   await queryHelper.query(QueryType.ReadOne, requestBody, res);
 });
 
+// Create profile
+router.post("/:userid", async (req, res) => {
+  let requestBody = {
+    userid: req.params.userid,
+    location: req.body.location,
+  };
+
+  await queryHelper.query(QueryType.Create, requestBody, res);
+});
+
 // Update profile
 router.patch("/:userid", async (req, res) => {
   let requestBody = {

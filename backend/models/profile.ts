@@ -5,10 +5,12 @@ const ProfileSchema = new mongoose.Schema(
     userid: {
       type: String,
       required: true,
+      unique: true,
     },
     picture: {
       type: String,
       required: false,
+      default: "None",
     },
     location: {
       type: String,

@@ -23,7 +23,7 @@ const KudosSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { timestamps: true, collection: "posts" }
+  { timestamps: true, collection: "kudos" }
 );
 
 const Kudos = mongoose.model("Kudos", KudosSchema);
