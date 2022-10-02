@@ -1,9 +1,19 @@
 import React from 'react'
 import { useState } from 'react'
 
-function SendKudos() {
+const SendKudos = ({ setChoice, setWindow }) => {
     // Need some work to send to the other user and display on their thingy
-    
+    const handleAnyClick = () => {
+        setChoice(true);
+        setWindow(false);
+
+    }
+    const handleCancelClick = () => {
+        setChoice(false);
+        setWindow(false);
+
+    }
+
     const [kudo, setKudo] = useState('');
     const [display, setDisplay] = useState(false);
     const onClick = () => {
@@ -11,59 +21,83 @@ function SendKudos() {
         console.log(display);
     };
 
-    
+
 
     const messages = [
         {
-        id: 1,
-        message: "Keep it up!"
-    }, 
-    {
-        id: 2,
-        message: "Working hard or hardly working?"
-    }]
+            id: 1,
+            message: "Keep it up!"
+        },
+        {
+            id: 2,
+            message: "Working hard or hardly working?"
+        }]
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const mkudo = {kudo};
+        const mkudo = { kudo };
         console.log(mkudo);
-      }
+    }
 
 
-  return (
-    <div>
-        {messages.map(({id, message}) => (
-            <button className='flex flex-col border rounded-sm my-1 w-full' key={id}> 
-                <p className='text-center'>{message}</p>
-            </button>
-        ))}
-        <button onClick={onClick}>
-            Customize your own message!
-            {/* Reveal */}
-        </button>
-        {
-            display && (
-                <form className='' action="" onSubmit={handleSubmit} >
-                {/* Textbox for kudo */}
-                <textarea  className='w-full border'
-                onChange={e => setKudo(e.target.value)}
-                placeholder="Send a kudo!"
-                name="" id=""></textarea>
-                {/* Send button */}
-                <button>
-                    Send!
-                </button>
-    
-    
-            </form>
-                
-            )
-        }
-        {/* Initially hidden */}
+    return (
+        <div className='bg-slate-200 opacity-80 fixed inset-0 z-50 '>
+            <div className='flex flex-col h-screen justify-center items-center opacity-100' >
+                {/* Change bottom to position height */}
+                <div className=' absolute inset-x-0 bottom-20 flex-col rounded-lg justify-center opacity-100 bg-white py-12 px-auto border-sky-300'>
+                    <h1 className='text-center text-lg'>Send Kudos</h1>
+
+                    {/*  Fixed Messages */}
+                    {messages.map(({ id, message }) => (
+                        <button className='border-2 rounded-sm my-1 w-full'
+                            onClick={handleAnyClick}
+                            key={id}>
+                            <p className='text-center py-2'>{message}</p>
+                        </button>
+                    ))}
 
 
-    </div>
-  )
+                    <button className='text-center' onClick={onClick}>
+                        Customize your own message!
+                        {/* Reveal */}
+                    </button>
+                    {/* Initially hidden */}
+
+
+                    {
+                        display && (
+                            <form className='' action="" onSubmit={handleSubmit} >
+                                {/* Textbox for kudo */}
+                                <textarea className='w-full border'
+                                    onChange={e => setKudo(e.target.value)}
+                                    placeholder="Send a kudo!"
+                                    name="" id=""></textarea>
+
+                                {/* Send button */}
+                                <button
+                                    onClick={handleAnyClick}>
+                                    Send!
+                                </button>
+
+
+                            </form>
+
+                        )
+                    }
+                    <div className='text-center'>
+                    <button className='border-2 py-2 rounded-md w-full' onClick={handleCancelClick}>Cancel</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    )
 }
 
 export default SendKudos

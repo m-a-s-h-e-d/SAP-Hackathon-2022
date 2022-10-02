@@ -1,10 +1,19 @@
 import React from 'react'
+import SendKudos from './SendKudos'
+import { useState } from 'react'
 
 function KudosToday() {
     // Messages Board
-    
+
 
     //Send one back
+    const [window, setWindow] = useState(false)
+    const [choice, setChoice] = useState(false)
+
+    const clicked = () => {
+        console.log(this)
+        setWindow(true);
+    }
     //Add to Scrapbook
     const messages = [
         {
@@ -51,14 +60,15 @@ function KudosToday() {
                     
                         <div className='ButtonsToRight'>
                         <span>
-                                {/* Add to ScrapBook */}
-                                <button className='mx-auto'>
+                                {/* SendKudos clicking is a hit or miss*/}
+
+                                <button onClick={clicked} className='mx-auto'>
                                 <object className="mx-auto my-auto" type="image/svg+xml" data='../images/reply.svg' >
                             </object>
                                 </button>
                             </span>
                             <span>
-                                {/* SendKudos */}
+                                {/* Add to ScrapBook */}
                                 <button className='my-auto'>
                                 <object className="mx-auto my-auto" type="image/svg+xml" data='../images/favorite_border.svg' >
                                 </object>
@@ -68,9 +78,6 @@ function KudosToday() {
 
                     </div>
 
-
-
-
                     {/* message */}
                     <p className='message'>{message}</p>
 
@@ -79,6 +86,7 @@ function KudosToday() {
 
 
             ))}
+            {window && <SendKudos setChoice={setChoice} setWindow={setWindow} />}
 
         </div>
     )
