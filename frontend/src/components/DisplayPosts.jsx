@@ -3,6 +3,7 @@ import { useState } from 'react'
 import projects from './projects.json'
 import MakePost from './MakePost'
 
+
 function DisplayPosts() {
     const [post, setPosts] = useState(projects.projects)
     console.log(projects)

@@ -1,52 +1,66 @@
 import React, { useState } from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     
     const [nav, setNav] = useState(false);
 
+
     const links = [
         {
             id: 1,
-            link: 'home',
-            pic: '../images/home-3.svg'
+            name: 'home',
+            pic: '../images/home-3.svg',
+            link: '/'
 
         },
         {
             id: 2,
-            link: 'Kudos',
-            pic: '../images/privacy-policy.svg'
+            name: 'Kudos',
+            pic: '../images/privacy-policy.svg',
+            link: '/Kudos'
+
 
         },
         {
             id: 3,
-            link: 'Scrapbook',
-            pic: '../images/favorite.svg'
+            name: 'Scrapbook',
+            pic: '../images/favorite.svg',
+            link: '/Scrapbook'
+
 
         },
         {
             id: 4,
-            link: 'Profile',
-            pic: '../images/profile.svg'
+            name: 'Profile',
+            pic: '../images/profile.svg',
+            link: '/Profile'
+
 
         },
 
     ]
 
   return (
-    <footer className='flex items-center w-full h-20 text-white fixed bottom-0 bg-slate-400 rounded-t'>
-        {links.map(({id, link, pic}) => (
-            <div className='flex-col w-1/4' key={id}> 
+    <footer className='flex items-center w-full h-20 text-white fixed bottom-0 bg-slate-50 rounded-t'>
+        {links.map(({id, link, pic, name}) => (
+
+
+                <Link className='flex-col w-1/4' key={id} to={link}>
+
                 <div className="text-center">
                     <object className="mx-auto my-auto" type="image/svg+xml" data={pic} >
-                </object>
+                    </object>
+ 
 
-                <p className='text-sm mx-auto my-auto'>{link}</p>
+                {/* <p className='text-sm mx-auto my-auto'>{link}</p> */}
                     
                 </div>
 
+                </Link>
 
-            </div>
+
         ))}
 
     </footer>
