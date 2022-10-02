@@ -17,7 +17,7 @@ module.exports = {
     //  red #FFA7A0
 // DAF0F7 WATER
 // FFFFD1 Yellow
-// CD978B
+//CD978B
 
 
     // }
