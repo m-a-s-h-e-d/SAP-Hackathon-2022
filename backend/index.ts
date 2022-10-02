@@ -17,7 +17,7 @@ app.use(cors());
 
 // Database connection setup
 mongoose.connect(
-  "mongodb+srv://ethos-admin:saphackathon2022@ethos.sfpyfac.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://ethos-admin:saphackathon2022@ethos.sfpyfac.mongodb.net/ethosDatabase?retryWrites=true&w=majority"
 );
 
 // Authentication endpoints
