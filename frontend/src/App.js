@@ -22,21 +22,17 @@ function App() {
   const [title, setTitle] = useState('Home');
 
 
-
-
-
   return (
     <div>
         <Router>
-          <Header title={title} />
+          <Header/>
           <Routes>
-            <Route path="/" element={<DisplayPosts />}></Route>
+            <Route path="/" element={<DisplayPosts  />}></Route>
                 <Route path="/Profile" element={<Profile />}></Route>
                 <Route path='/Kudos' element={<KudosToday/>}></Route>
                 <Route path="/Scrapbook" element={<Scrapbook />}></Route>
             </Routes>
-            <Navbar />
-
+            <Navbar/>
         </Router>
 
     </div>

@@ -7,6 +7,7 @@ module.exports = {
     extend: {},
     fontFamily:{
       signature: ["Great Vibes"],
+
     },
     // colors: {
     //   'bg-w': '#DAE0E1',

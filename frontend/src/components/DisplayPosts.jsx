@@ -1,12 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
-import projects from './projects.json'
 import MakePost from './MakePost'
 
 
 function DisplayPosts() {
-    const [post, setPosts] = useState(projects.projects)
-    console.log(projects)
+    const [post, setPosts] = useState(' ')
 
     // Modal for Make Post
     const [window, setWindow] = useState(false)
@@ -43,7 +41,7 @@ function DisplayPosts() {
 
 
     return (
-        <div className='my-2 min-h-screen bg-[#F5F5F4]'>
+        <div className=' min-h-screen bg-gradient-to-b from-slate-50 to-blue-100'>
 
             {/* Change post */}
             <div className='flex py-2 justify-end' onClick={clicked}>

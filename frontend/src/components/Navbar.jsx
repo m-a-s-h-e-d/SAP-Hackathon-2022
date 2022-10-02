@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import {FaBars, FaTimes} from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
+import Header from './Header';
 
 const Navbar = () => {
-    
+
     const [nav, setNav] = useState(false);
 
 
@@ -42,25 +43,31 @@ const Navbar = () => {
 
     ]
 
-  return (
-    <footer className='flex items-center w-full h-20 text-white fixed bottom-0 bg-slate-50 rounded-t'>
-        {links.map(({id, link, pic, name}) => (
+    return (
+
+        <div className="nav">
+
+            <div className='flex items-center w-full h-20 text-white fixed bottom-0 bg-slate-50 rounded-t'>
+                {links.map(({ id, link, pic, name }) => (
 
 
-                <Link className=' flex-col w-1/4' key={id} to={link}>
+                    <Link className=' flex-col w-1/4' key={id} to={link}>
 
-                <div className="text-center max-w-md">
-                    <object className="mx-auto my-auto" type="image/svg+xml" data={pic} >
-                    </object>
-                </div>
+                        <div className="text-center max-w-md">
+                            <object className="mx-auto my-auto" type="image/svg+xml" data={pic} >
+                            </object>
+                        </div>
 
-                </Link>
+                    </Link>
 
 
-        ))}
+                ))}
 
-    </footer>
-  )
+            </div>
+
+        </div>
+
+    )
 }
 
 export default Navbar;

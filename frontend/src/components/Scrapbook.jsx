@@ -1,5 +1,4 @@
 import React from 'react'
-import projects from './projects.json'
 import { useState } from 'react'
 
 
@@ -43,7 +42,7 @@ function Scrapbook() {
 
 
   return (
-    <div className='flex-col py-2 bg-[#F5F5F4] min-h-screen'>
+    <div className='flex-col py-2 bg-gradient-to-b from-slate-50 to-rose-50 min-h-screen'>
       {/* Container for award and text  */}
 
       {/* Dynamically Create */}

@@ -49,7 +49,7 @@ function KudosToday() {
 
 
     return (
-        <div className='my-2 min-h-screen bg-[#F5F5F4]'>
+        <div className='min-h-screen bg-gradient-to-b from-slate-50 to-orange-50'>
 
             {messages.map(({ id, name, message, pic, time }) => (
 
